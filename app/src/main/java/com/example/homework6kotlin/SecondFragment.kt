@@ -5,19 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.homework6kotlin.databinding.FragmentSecondBinding
 
 class SecondFragment : Fragment() {
 
-    private lateinit var binding: FragmentSecondBinding
+    private var _binding: FragmentSecondBinding? = null
+    private val binding: FragmentSecondBinding get() = _binding!!
     private val animalsLisiAdapter = AnimalListAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentSecondBinding.inflate(inflater, container, false)
+        _binding = FragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
     }
 

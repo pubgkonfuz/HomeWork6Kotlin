@@ -2,6 +2,7 @@ package com.example.homework6kotlin
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homework6kotlin.databinding.AnimalsItemBinding
 

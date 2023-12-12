@@ -9,14 +9,15 @@ import com.example.homework6kotlin.databinding.FragmentLastBinding
 
 class LastFragment : Fragment() {
 
-    private lateinit var binding: FragmentLastBinding
+    private var _binding: FragmentLastBinding? = null
+    private val binding: FragmentLastBinding get() = _binding!!
     private var count = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentLastBinding.inflate(inflater, container, false)
+        _binding = FragmentLastBinding.inflate(inflater, container, false)
         return binding.root
     }
 
